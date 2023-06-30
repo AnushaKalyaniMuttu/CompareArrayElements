@@ -1,0 +1,31 @@
+package com.employee;
+
+import java.util.Arrays;
+
+public class GroupingBy {
+   
+	public static void main(String [] args) {
+		int[] arr1=new int[] {1,23,45,5};
+		int[] arr2=new int[] {23,5,45,1};
+		
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+		if(compare(arr1,arr2)) {
+			System.out.println("Arrays are Equal");
+		}
+		else {
+			System.out.println("Arrays are not Equal");
+		}
+	}
+	public static boolean compare(int[] array1,int[] array2) {
+		if(array1.length!=array2.length) {
+			return false;
+		}
+	for(int i=0;i<array1.length;i++) {
+			if(array1[i]!=array2[i]) {
+				return false;
+			}
+	}
+	return true;
+	}
+}
